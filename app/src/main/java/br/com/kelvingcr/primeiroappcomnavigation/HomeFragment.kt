@@ -21,6 +21,7 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         //Usando um facilitador
+        //Commit
         binding.btnSignIn.setOnClickListener(
             Navigation.createNavigateOnClickListener(R.id.action_homeFragment_to_loginFragment)
         )
