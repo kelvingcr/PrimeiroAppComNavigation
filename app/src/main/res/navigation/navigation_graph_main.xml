@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph_main"
+    app:startDestination="@id/homeFragment">
+
+
+    <action
+        android:id="@+id/action_global_panelFragment"
+        app:destination="@id/panelFragment" />
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="br.com.kelvingcr.primeiroappcomnavigation.HomeFragment"
+        android:label="FragmentHome"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_panelFragment"
+            app:destination="@id/panelFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/panelFragment"
+        android:name="br.com.kelvingcr.primeiroappcomnavigation.PanelFragment"
+        android:label="fragment_panel"
+        tools:layout="@layout/fragment_panel" />
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="br.com.kelvingcr.primeiroappcomnavigation.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login">
+        <action
+            app:popUpTo="@id/homeFragment"
+            android:id="@+id/action_loginFragment_to_panelFragment"
+            app:destination="@id/panelFragment" />
+    </fragment>
+
+
+
+</navigation>
