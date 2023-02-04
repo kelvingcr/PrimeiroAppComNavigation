@@ -22,6 +22,7 @@ class HomeFragment : Fragment() {
 
         //Usando um facilitador
         //Commit
+        //Branch
         binding.btnSignIn.setOnClickListener(
             Navigation.createNavigateOnClickListener(R.id.action_homeFragment_to_loginFragment)
         )
